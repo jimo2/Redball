@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> 
+            </script>
+         
+         <style>
+             #redball{ position:absolute; }
+         </style>
+            
+         <script>
+            function pfadeOut(){
+                var myparagraph=$("#redball");
+                myparagraph.fadeOut();
+            }
+            
+            function pfadeIn(){
+                var myparagraph=$("#redball");
+                myparagraph.fadeIn();
+            }
+            
+            function moveup(){
+                var ball=$("#redball");
+                ball.animate({"top":"-=10"},100,"linear");
+                
+            }
+            
+            function movedown(){
+                var ball=$("#redball");
+                ball.animate({"top":"+=10"},100,"linear");
+                
+            }
+            
+            function moveleft(){
+                var ball=$("#redball");
+                ball.animate({"left":"-=10"},100,"linear");
+                
+            }
+               
+            function moveright(){
+                var ball=$("#redball");
+                ball.animate({"left":"+=10"},100,"linear");
+                
+            }  
+            
+             function movesquare(){
+                var ball=$("#redball");
+                 ball.animate({"left":"+=100"},500,"linear");
+                 ball.animate({"top":"-=100"},500,"linear");
+                 ball.animate({"left":"-=100"},500,"linear");
+                 ball.animate({"top":"+=100"},500,"linear");
+                
+            }
+            
+            function movetriangle(){
+                var ball=$("#redball");
+                ball.animate({"left":"+=100"},100,"linear");
+                ball.animate({"left":"-=50","top":"-=50"},100,"linear");
+                ball.animate({"left":"-=50","top":"+=50"},100,"linear");
+            }
+               
+               
+            
+             function moveoctagon(){ var ball=$("#redball");
+                ball.animate({"left":"+=100"},100,"linear");
+                ball.animate({"left":"+=50","top":"+=50"},100,"linear");
+                ball.animate({"top":"+=100"}, 100, "linear");
+                ball.animate({"top":"+=50","left":"-=50"},100,"linear");
+                ball.animate({"left":"-=100"},100,"linear");
+                ball.animate({"left":"-=50","top":"-=50"},100,"linear");
+                ball.animate({"top":"-=100"}, 100, "linear");
+                ball.animate({"left":"+=50","top":"-=50"},100,"linear");
+            
+            
+            
+             } 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                     
+        </script>    
+        
+    </head>
+            <body>
+                
+           
+        <button onclick="pfadeOut()">Fade Out</button>
+        
+        <button onclick="pfadeIn()">Fade In</button>
+        
+        
+        
+        <button onclick="moveleft()">Move Left</button>
+        
+        <button onclick="moveright()">Move Right</button>
+        
+        <button onclick="moveup()">Move Up</button>
+        
+        <button onclick="movedown()">Move Down</button>
+        
+        <button onclick="movetriangle()">Triangle</button>
+        
+        <button onclick="movesquare()">Square</button>
+        
+        <button onclick="moveoctagon()">Octagon</button>
+        
+         <img height=30 id="redball" src="http://stuffpoint.com/pokemon/image/13395-pokemon-pikachu-running.gif"/>
+            </p>
+            
+            
+            
+     
+            </body>
+</html>

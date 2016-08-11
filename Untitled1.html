@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+    
+      <script type="text/javascript">
+      
+      document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                {
+                    var x = 2;
+                }
+                
+                Sayhello();
+            }
+      });
+      
+    function movesquare() {
+        var i;
+        for(i=0;i<50; i++){
+            moveright();
+        }
+        
+         for(i=0;i<50; i++){
+             movedown();
+         }
+         
+          for(i=0;i<50; i++){
+              moveleft();
+         }
+         
+          for(i=0;i<50; i++){
+              moveup();
+         }
+       
+        
+    }
+    
+           function movetriangle() {
+                for(i=0;i<50; i++){
+                    moveright();
+                }
+                
+                for(i=50;i>25; i--) {
+                    moveleft();
+                    moveup();
+                }    
+                
+                for(i=25;i>0; i--) {
+                    movedown();
+                    moveleft();
+               }
+           }
+          function moveoctagon() {
+              
+          }
+               
+          function Sayhello() {
+              alert('I herd you liek mudkipz')
+          }
+          
+          function moveright() {
+              //alert(redball.left);
+              //alert(window.innerWidth);
+              if(redball.left <= window.innerWidth - 20){
+                 redball.left= redball.left +20;
+               }else{
+                   redball.left=-10;
+               }
+          }
+          
+          function moveleft() {
+              if(redball.left >= 0){
+                redball.left= redball.left -18;
+              }
+              
+               else{
+                   //alert(window.innerWidth);
+                   //alert('Hit left wall!');
+                   redball.left = redball.left + window.innerWidth - 10;
+               }
+                  
+          }
+          
+          function moveup() {
+              
+              if(redball.top >= 0){
+              redball.top= redball.top -20;
+          }}
+          
+          function movedown() {
+              redball.top= redball.top +1;
+          }
+          
+          function moveupright() {
+              redball.left = redball.left +3;
+              redball.top =redball.top -3;
+          }
+          
+      </script>
+      <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+   </head>
+   
+   <body>
+           
+      
+           <button onclick="movesquare()">Square</button>
+           
+           <button onclick="Sayhello()">Hello World</button>
+           
+           <button onclick="moveright()">Move Right</button>
+           
+           <button onclick="moveleft()">Move Left</button>
+           
+           <button onclick="moveup()">Move Up</button>
+           
+           <button onclick="movedown()">Move Down</button>
+           
+           <button onclick="moveupright()">Up Right</button>
+           
+           <button onclick="movetriangle()">Traingle Path</button>
+           
+           <button onclick="moveoctagon()">Octagon Path</button>
+           
+                       <img height=30 id="redball" src="http://stuffpoint.com/pokemon/image/13395-pokemon-pikachu-running.gif"/>
+  
+           
+  
+   </body>
+   
+</html>

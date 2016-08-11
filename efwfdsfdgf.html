@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> 
+            </script>
+         
+         <style>
+             #redball{
+                 position:absolute;
+             }
+         </style>
+            
+         <script>
+            function pfadeOut(){
+                var myparagraph=$("#gt");
+                myparagraph.fadeOut();
+            }
+            
+            function pfadeIn(){
+                var myparagraph=$("#gt");
+                myparagraph.fadeIn();
+            }
+            
+                     
+        </script>    
+        
+    </head>
+            <body>
+                
+            <p id="gt">
+                My first Paragraph
+            </p>
+                
+            <p>
+                My Second Paragraph
+            </p>
+            
+            <p>
+                <button onclick="pfadeOut()">Fade Out</button>
+                <button onclick="pfadeIn()">Fade In</button>
+            </p>
+            
+            
+       
+            
+            </body>
+</html>
+

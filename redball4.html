@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+   
+        <style> 
+            #redball{
+            position:absolute;
+            }
+        </style>
+      
+      
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> 
+            </script>
+
+      
+      
+      
+      <script>
+      function moveright(){
+          var ball=$("#redball");
+          //$("#redball").animate({"left":"+=100"},10000,"linear");
+          ball.animate({"left":"+=50"},1000,"linear");
+      }
+              
+      function moveleft(){
+          var ball=$("#redball");
+          ball.animate({"left":"-=50"},1000,"linear");
+      }
+          
+          
+    function pfadeOut(){
+                var myparagraph = $("#test");
+                myparagraph.fadeOut();
+            }
+            
+            function pfadeIn(){
+                var myparagraph=$("#test");
+                myparagraph.fadeIn();
+            }
+            
+                     
+      </script>
+      
+   </head>
+
+   <body> 
+      
+         
+      <p id="test">
+      Something
+      </p>
+
+      <p>Random</p>  
+      <p>
+   <button onclick="pfadeOut()">Fade Out</button>
+   <button onclick="pfadeIn()">Fade In</button> 
+   <button onclick="moveright()">Move Right</button>
+   <button onclick="moveleft()">Move Left</button>
+   <img height=30 id="redball" src="http://stuffpoint.com/pokemon/image/13395-pokemon-pikachu-running.gif"/>
+   </p>
+   </body>
+
+</html>
