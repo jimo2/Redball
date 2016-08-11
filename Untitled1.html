@@ -83,12 +83,14 @@
           
           function moveup() {
               
-              if(redball.top >= 0){
+              if(redball.top >= 1){
               redball.top= redball.top -20;
           }}
           
           function movedown() {
-              redball.top= redball.top +1;
+              if(redball.top <= window.innerHeight - 50){
+                redball.top= redball.top +20;
+              }
           }
           
           function moveupright() {
